@@ -26,7 +26,6 @@ That gives you a clean path to add about, privacy, legal, waitlist, and future p
 
 ```text
 .
-├── IMPLEMENTATION_PLAN.md
 ├── components.json
 ├── src
 │   ├── app
@@ -68,6 +67,23 @@ Run lint:
 ```bash
 npm run lint
 ```
+
+Run production build validation:
+
+```bash
+npm run build
+```
+
+## Documentation
+
+Harness and engineering guidance now lives in-repo:
+
+- [AGENTS.md](/home/fikrilal/devs/work/orymu/kevly-web/AGENTS.md)
+- [docs/README.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/README.md)
+- [docs/engineering/project_architecture.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/project_architecture.md)
+- [docs/engineering/guardrails.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/guardrails.md)
+- [docs/engineering/agent_pr_loop.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/agent_pr_loop.md)
+- [docs/exec-plans/README.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/exec-plans/README.md)
 
 ## shadcn/ui
 
