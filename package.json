@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "lint:guardrails": "node scripts/check-guardrails.mjs",
+    "verify": "node scripts/verify.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

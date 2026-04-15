@@ -22,13 +22,6 @@ This document defines the default delivery loop for agent-authored changes in `k
 Before claiming completion, run the relevant checks:
 
 ```bash
-npm run lint
-npm run build
-```
-
-When the verify harness is added, this becomes:
-
-```bash
 npm run verify
 ```
 

@@ -68,10 +68,22 @@ Run lint:
 npm run lint
 ```
 
+Run typecheck:
+
+```bash
+npm run typecheck
+```
+
 Run production build validation:
 
 ```bash
 npm run build
+```
+
+Run the canonical local gate:
+
+```bash
+npm run verify
 ```
 
 ## Documentation

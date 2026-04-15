@@ -41,11 +41,12 @@
 Use native project commands:
 
 - `npm run lint`
+- `npm run typecheck`
 - `npm run build`
+- `npm run lint:guardrails`
+- `npm run verify`
 
-For non-trivial changes, run both before claiming completion.
-
-When Phase 2 lands, `npm run verify` will become the canonical gate.
+For non-trivial changes, use `npm run verify` before claiming completion.
 
 ## Delivery Loop
 
