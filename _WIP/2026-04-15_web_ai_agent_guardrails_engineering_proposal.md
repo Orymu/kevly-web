@@ -1,8 +1,26 @@
 # Engineering Proposal: Strict AI-Agent Guardrails For `kevly-web`
 
 Date: 2026-04-15
-Status: Draft proposal
+Status: Implemented baseline
 Scope: repository harness, documentation, verification, and boundary enforcement for AI-assisted development
+
+## Implementation Status
+
+Implemented in repo:
+- `AGENTS.md`
+- docs skeleton and engineering docs
+- execution-plan workflow
+- `npm run verify`
+- `scripts/check-guardrails.mjs`
+- ESLint boundary enforcement
+- Playwright smoke harness and runtime-evidence docs
+- PR template
+- CI jobs for `verify` and Playwright smoke
+
+Still intentionally deferred:
+- broader browser matrix beyond the current smoke lane
+- richer style/token guardrails such as raw-color enforcement
+- heavier custom lint/plugin infrastructure unless the repo earns it
 
 ## 1. References
 
@@ -80,15 +98,9 @@ That foundation is already more legible than many early-stage web repos.
 ## 4.2 Current Gaps
 
 What is missing today:
-- no repository-local `AGENTS.md`
-- no docs index or engineering docs
-- no explicit execution-plan workflow
-- no canonical `verify` command
-- no structural linting beyond standard ESLint
-- no route/component boundary enforcement
-- no runtime evidence workflow for UI changes
-- no PR/evidence discipline documented in-repo
-- no recurring cleanup rule for agent-generated drift
+- no broader browser matrix beyond the current smoke lane
+- no richer style/token guardrails such as raw-color enforcement
+- no CI status enforcement beyond the added baseline workflows
 
 ## 4.3 Risk If We Do Nothing
 

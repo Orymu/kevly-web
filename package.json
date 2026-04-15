@@ -10,7 +10,9 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "lint:guardrails": "node scripts/check-guardrails.mjs",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "test:e2e:smoke": "npm run build && playwright test --config=playwright.config.ts",
+    "evidence:web": "npm run test:e2e:smoke"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -23,6 +25,7 @@
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

@@ -19,7 +19,10 @@ export function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+        <nav
+          aria-label="Primary"
+          className="hidden items-center gap-6 text-sm text-muted-foreground md:flex"
+        >
           {siteConfig.nav.map((item) => (
             <Link key={item.href} href={item.href} className="hover:text-foreground">
               {item.label}

@@ -25,6 +25,12 @@ Before claiming completion, run the relevant checks:
 npm run verify
 ```
 
+For medium/high-risk UI or navigation changes, also run:
+
+```bash
+npm run test:e2e:smoke
+```
+
 ## 4. Self-Review
 
 Confirm:
@@ -36,7 +42,7 @@ Confirm:
 ## 5. Evidence Expectations
 
 - `low`: code checks are usually enough
-- `medium`: code checks plus targeted runtime evidence once the web runtime harness lands
+- `medium`: code checks plus targeted runtime evidence via `docs/engineering/web_runtime_harness.md`
 - `high`: code checks, runtime evidence, and human review required
 
 ## 6. Merge Discipline

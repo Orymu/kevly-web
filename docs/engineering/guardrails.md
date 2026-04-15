@@ -12,6 +12,8 @@ Current enforced gates:
 - `npm run build`
 - `npm run lint:guardrails`
 - `npm run verify`
+- `npm run test:e2e:smoke` for browser smoke coverage
+- CI parity for `verify` and Playwright smoke on pull requests and `main`
 
 Current structural rules:
 - route files stay under `src/app/**`
@@ -44,13 +46,37 @@ Current guardrail script checks:
 - `https://kevly.app` may only appear in approved config files
 - `src/config/site.ts` may only export `siteConfig`
 
+## Runtime Evidence
+
+Use:
+
+```bash
+npm run test:e2e:smoke
+```
+
+or:
+
+```bash
+npm run evidence:web
+```
+
+Artifacts are written under `_artifacts/playwright/`.
+
+For the runtime workflow and evidence expectations, see `web_runtime_harness.md`.
+
+## CI Parity
+
+Current repository automation:
+- `.github/workflows/verify.yml` runs `npm run verify`
+- `.github/workflows/playwright-smoke.yml` runs `npm run test:e2e:smoke`
+- Playwright artifacts are uploaded from `_artifacts/playwright/`
+
 ## Planned Next Guardrails
 
 These are the next guardrails to add after the current phase:
 
-1. Runtime evidence workflow
-- lightweight web harness using Playwright
-- required for medium/high-risk UI or navigation changes
+1. Stronger browser/runtime coverage
+- add richer route assertions or broader browser coverage when the repo earns it
 
 ## Candidate Mechanical Checks
 

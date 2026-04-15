@@ -16,6 +16,7 @@ Use it to keep important context in the repo instead of in chat, memory, or ad h
 - Architecture: `engineering/project_architecture.md`
 - Guardrails: `engineering/guardrails.md`
 - Agent PR loop: `engineering/agent_pr_loop.md`
+- Runtime evidence: `engineering/web_runtime_harness.md`
 - Execution plans: `exec-plans/README.md`
 
 ## Rules

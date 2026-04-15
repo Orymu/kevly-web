@@ -86,6 +86,22 @@ Run the canonical local gate:
 npm run verify
 ```
 
+Run browser smoke checks:
+
+```bash
+npm run test:e2e:smoke
+```
+
+Collect browser evidence artifacts:
+
+```bash
+npm run evidence:web
+```
+
+CI automation:
+- `.github/workflows/verify.yml`
+- `.github/workflows/playwright-smoke.yml`
+
 ## Documentation
 
 Harness and engineering guidance now lives in-repo:
@@ -95,6 +111,7 @@ Harness and engineering guidance now lives in-repo:
 - [docs/engineering/project_architecture.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/project_architecture.md)
 - [docs/engineering/guardrails.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/guardrails.md)
 - [docs/engineering/agent_pr_loop.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/agent_pr_loop.md)
+- [docs/engineering/web_runtime_harness.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/engineering/web_runtime_harness.md)
 - [docs/exec-plans/README.md](/home/fikrilal/devs/work/orymu/kevly-web/docs/exec-plans/README.md)
 
 ## shadcn/ui
