@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.kevly",
+      "sha256_cert_fingerprints": [
+        "57:65:5D:50:C1:A8:A8:6B:08:19:C6:83:00:A3:54:D9:A0:72:1B:62:09:BB:DF:01:53:0A:E0:A3:01:A2:E6:E8"
+      ]
+    }
+  }
+]
