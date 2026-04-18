@@ -8,5 +8,15 @@
         "57:65:5D:50:C1:A8:A8:6B:08:19:C6:83:00:A3:54:D9:A0:72:1B:62:09:BB:DF:01:53:0A:E0:A3:01:A2:E6:E8"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.kevly.dev",
+      "sha256_cert_fingerprints": [
+        "99:D3:73:43:59:69:A0:10:E4:58:6A:91:0D:A6:D4:C2:EB:A5:F6:4C:5A:3B:D7:B4:DF:A1:BB:7F:87:F5:35:39"
+      ]
+    }
   }
 ]
