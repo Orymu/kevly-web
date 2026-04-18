@@ -22,6 +22,13 @@ test.describe("marketing smoke", () => {
         name: /privacy matters more when money, receipts, and shared spaces are involved/i,
       })
     ).toBeVisible();
+
+    await page.goto("/delete-account");
+    await expect(
+      page.getByRole("heading", {
+        name: /account deletion should be clear before it becomes permanent/i,
+      })
+    ).toBeVisible();
   });
 
   test("primary navigation works across static routes and homepage sections", async ({
