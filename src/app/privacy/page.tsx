@@ -3,10 +3,16 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/site/page-hero";
 import { PageSection } from "@/components/site/page-section";
 import { PageShell } from "@/components/site/page-shell";
+import {
+  privacyPolicyIntro,
+  privacyPolicyLastUpdated,
+  privacyPolicySections,
+} from "@/app/privacy/privacy-policy-content";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy placeholder for the Kevly marketing website.",
+  description:
+    "Kevly's privacy policy covering account information, receipt handling, permissions, retention, and user choices.",
 };
 
 export default function PrivacyPage() {
@@ -14,23 +20,29 @@ export default function PrivacyPage() {
     <PageShell>
       <PageHero
         eyebrow="Privacy Policy"
-        title="A straightforward privacy page is better than pretending the policy does not exist."
-        description="This placeholder route gives the MVP a real legal surface. Replace the text below with final policy language before launch."
+        title="Privacy matters more when money, receipts, and shared spaces are involved."
+        description={privacyPolicyIntro}
       />
       <div className="shell">
-        <PageSection title="Current placeholder">
-          <p>
-            Kevly does not yet describe any production data handling in this repo.
-            Before launch, this page should be updated to reflect the actual
-            analytics, form handling, cookies, email collection, and third-party
-            services used by the site.
-          </p>
-          <p>
-            If the site only serves static content with a contact link, the policy
-            can stay minimal. If you add waitlists, analytics, or embedded tools,
-            the page should be updated immediately.
-          </p>
-        </PageSection>
+        <div className="grid gap-6 pb-12 lg:pb-16">
+          <PageSection title="Overview">
+            <p>Last updated: {privacyPolicyLastUpdated}</p>
+            <p>{privacyPolicyIntro}</p>
+          </PageSection>
+
+          {privacyPolicySections.map((section) => (
+            <PageSection key={section.title} title={section.title}>
+              {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {section.bullets ? (
+                <ul className="list-disc space-y-3 pl-5">
+                  {section.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </PageSection>
+          ))}
+        </div>
       </div>
     </PageShell>
   );

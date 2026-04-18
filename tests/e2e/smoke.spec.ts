@@ -19,7 +19,7 @@ test.describe("marketing smoke", () => {
     await page.goto("/privacy");
     await expect(
       page.getByRole("heading", {
-        name: /a straightforward privacy page is better than pretending the policy does not exist/i,
+        name: /privacy matters more when money, receipts, and shared spaces are involved/i,
       })
     ).toBeVisible();
   });
@@ -36,7 +36,9 @@ test.describe("marketing smoke", () => {
     await page.getByRole("banner").getByRole("link", { name: "Privacy" }).click();
     await expect(page).toHaveURL(/\/privacy$/);
     await expect(
-      page.getByRole("heading", { name: /straightforward privacy page/i })
+      page.getByRole("heading", {
+        name: /privacy matters more when money, receipts, and shared spaces are involved/i,
+      })
     ).toBeVisible();
 
     await page.getByRole("banner").getByRole("link", { name: "About" }).click();
