@@ -34,7 +34,7 @@
   --lp-radius-s: 8px;
 
   --lp-font-serif: var(--font-instrument-serif), serif;
-  --lp-font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --lp-font-sans: var(--font-geist), system-ui, sans-serif;
 }
 
 /* Reset and Base */
