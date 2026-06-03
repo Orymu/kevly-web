@@ -310,15 +310,15 @@
 .google-play-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
+  gap: 8px;
+  padding: 6px 14px;
   background: #000000;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .google-play-btn:hover {
@@ -328,36 +328,36 @@
 }
 
 .google-play-icon {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   flex-shrink: 0;
 }
 
 .google-play-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .google-play-label {
   font-family: var(--lp-font-sans);
   font-weight: 400;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 8px;
+  line-height: 10px;
   color: #ffffff;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 .google-play-store {
   font-family: var(--lp-font-sans);
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 }
 
 .learn-more-btn {
-  padding: 13px 16px;
+  padding: 7px 16px;
   background: var(--lp-bg-primary);
   border: 1px solid var(--lp-border-subtle);
   border-radius: var(--lp-radius-m);
