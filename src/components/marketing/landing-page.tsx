@@ -463,14 +463,9 @@ export function LandingPage() {
         <nav className="nav-bar">
           <div className="flex items-center gap-[11px]">
             <img
-              src="/landing/logo-icon.svg"
-              alt=""
-              className="logo-icon"
-            />
-            <img
-              src="/landing/logo-text.svg"
+              src="/landing/logo-full.png"
               alt="Kevly"
-              className="logo-text"
+              className="logo-full"
             />
           </div>
 
