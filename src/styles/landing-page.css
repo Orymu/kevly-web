@@ -273,6 +273,11 @@
   flex-shrink: 0;
 }
 
+.tag-icon.app-logo {
+  width: auto;
+  height: 28px;
+}
+
 .tag-text {
   font-family: var(--lp-font-sans);
   font-weight: 500;
@@ -1553,6 +1558,10 @@
     height: 20px;
   }
 
+  .tag-icon.app-logo {
+    height: 24px;
+  }
+
   .tag-text {
     white-space: normal;
     font-size: 13px;
@@ -1786,6 +1795,10 @@
   .tag-icon {
     width: 18px;
     height: 18px;
+  }
+
+  .tag-icon.app-logo {
+    height: 22px;
   }
 
   .tag-text {
