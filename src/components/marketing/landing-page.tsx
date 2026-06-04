@@ -487,9 +487,9 @@ export function LandingPage() {
         <div className="hero-content">
           <div className="tag">
             <img
-              src="/landing/app-logo.png"
-              alt="Kevly"
-              className="tag-icon app-logo"
+              src="/landing/icon-sparkle-new.png"
+              alt=""
+              className="tag-icon"
             />
             <span className="tag-text">
               Built for daily spending and clean splitting
