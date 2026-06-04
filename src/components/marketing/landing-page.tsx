@@ -12,21 +12,11 @@ function GooglePlayButton() {
       rel="noopener noreferrer"
       aria-label="Get it on Google Play"
     >
-      <svg
-        className="google-play-icon"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M4.6 3.8c-.2.2-.3.5-.3.8v22.8c0 .3.1.6.3.8l.3.3L18 16 4.9 3.5l-.3.3z" fill="#EA4335" />
-        <path d="M22.5 12.5L6.5 2.2c-.4-.2-.8-.2-1.1.1l13 13 4.1-2.8z" fill="#FBBC04" />
-        <path d="M22.5 19.5l-4.1-2.8-12.9 13c.3.3.7.3 1.1.1l16-10.3z" fill="#34A853" />
-        <path d="M26.3 14.3l-3.8-2.5-4.3 3 4.3 3 3.8-2.5c.8-.5.8-1.5 0-2z" fill="#4285F4" />
-      </svg>
-      <div className="google-play-text">
-        <span className="google-play-label">GET IT ON</span>
-        <span className="google-play-store">Google Play</span>
-      </div>
+      <img
+        src="/landing/app-store.svg"
+        alt="Get it on Google Play"
+        className="google-play-badge"
+      />
     </a>
   );
 }
@@ -512,7 +502,6 @@ export function LandingPage() {
 
           <div className="hero-buttons">
             <GooglePlayButton />
-            <button className="learn-more-btn">Learn More</button>
           </div>
         </div>
 

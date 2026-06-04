@@ -310,15 +310,10 @@
 .google-play-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  background: #000000;
-  border-radius: 6px;
-  color: #ffffff;
+  border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .google-play-btn:hover {
@@ -327,53 +322,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.google-play-icon {
-  width: 26px;
-  height: 26px;
+.google-play-badge {
+  display: block;
+  width: 135px;
+  height: 40px;
   flex-shrink: 0;
-}
-
-.google-play-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-
-.google-play-label {
-  font-family: var(--lp-font-sans);
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 10px;
-  color: #ffffff;
-  letter-spacing: 0.06em;
-}
-
-.google-play-store {
-  font-family: var(--lp-font-sans);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-}
-
-.learn-more-btn {
-  padding: 7px 16px;
-  background: var(--lp-bg-primary);
-  border: 1px solid var(--lp-border-subtle);
-  border-radius: var(--lp-radius-m);
-  font-family: var(--lp-font-sans);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--lp-text-primary);
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-  box-sizing: border-box;
-}
-
-.learn-more-btn:hover {
-  background: var(--lp-bg-hover);
-  border-color: #e4e4e7;
 }
 
 /* Phone Mockups */
@@ -1627,23 +1580,12 @@
   }
 
   .google-play-btn {
-    padding: 5px 12px;
+    border-radius: 5px;
   }
 
-  .google-play-icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .google-play-store {
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  .learn-more-btn {
-    padding: 6px 14px;
-    font-size: 14px;
-    line-height: 20px;
+  .google-play-badge {
+    width: 122px;
+    height: 36px;
   }
 
   .phone-mockups {
@@ -1868,23 +1810,12 @@
   }
 
   .google-play-btn {
-    padding: 4px 10px;
-    gap: 6px;
+    border-radius: 4px;
   }
 
-  .google-play-icon {
-    width: 22px;
-    height: 22px;
-  }
-
-  .google-play-label {
-    font-size: 7px;
-    line-height: 9px;
-  }
-
-  .google-play-store {
-    font-size: 13px;
-    line-height: 17px;
+  .google-play-badge {
+    width: 110px;
+    height: 33px;
   }
 
   .learn-more-btn {
