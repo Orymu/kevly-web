@@ -463,12 +463,12 @@ export function LandingPage() {
         <nav className="nav-bar">
           <div className="flex items-center gap-[11px]">
             <img
-              src="/landing/logo-icon-new.png"
+              src="/landing/logo-icon.svg"
               alt=""
               className="logo-icon"
             />
             <img
-              src="/landing/logo-text-new.png"
+              src="/landing/logo-text.svg"
               alt="Kevly"
               className="logo-text"
             />
@@ -487,7 +487,7 @@ export function LandingPage() {
         <div className="hero-content">
           <div className="tag">
             <img
-              src="/landing/icon-sparkle-new.png"
+              src="/landing/icon-sparkle.svg"
               alt=""
               className="tag-icon"
             />
