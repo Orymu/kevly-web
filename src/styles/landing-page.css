@@ -196,6 +196,17 @@
   z-index: 10;
 }
 
+.logo-icon {
+  height: 44px;
+  width: 44px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  height: 35.75px;
+  width: auto;
+}
+
 .logo-full {
   height: 44px;
   width: auto;
@@ -1523,6 +1534,15 @@
     display: none;
   }
 
+  .logo-icon {
+    height: 32px;
+    width: 32px;
+  }
+
+  .logo-text {
+    height: 26px;
+  }
+
   .logo-full {
     height: 32px;
   }
@@ -1777,6 +1797,15 @@
     padding: 7px 12px;
     font-size: 13px;
     line-height: 18px;
+  }
+
+  .logo-icon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .logo-text {
+    height: 22.5px;
   }
 
   .logo-full {
