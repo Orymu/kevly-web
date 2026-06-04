@@ -477,6 +477,14 @@
   pointer-events: none;
 }
 
+/* Phone side gradients + bottom fill — hidden on desktop, active on mobile */
+.phone-side-left,
+.phone-side-right,
+.phone-bottom-fill {
+  display: none;
+  pointer-events: none;
+}
+
 /* Features Section */
 .features-section {
   background: var(--lp-bg-page);
@@ -1464,9 +1472,9 @@
   .phone-mockups-inner {
     position: relative;
     width: 100%;
-    max-width: 412px;
+    max-width: 520px;
     margin: 0 auto;
-    aspect-ratio: 412 / 420;
+    aspect-ratio: 520 / 560;
     height: auto;
     display: block;
   }
@@ -1482,7 +1490,7 @@
     right: auto;
     bottom: auto;
     transform: translateX(-50%);
-    width: 45%;
+    width: 52%;
     height: auto;
     aspect-ratio: 185 / 378;
     top: 0;
@@ -1492,32 +1500,32 @@
 
   .phone-device.left {
     position: absolute;
-    left: 1%;
+    left: 2%;
     right: auto;
-    width: 47%;
+    width: 44%;
     height: auto;
-    aspect-ratio: 190 / 320;
-    top: 21%;
+    aspect-ratio: 185 / 378;
+    top: 6%;
     z-index: 2;
   }
 
   .phone-device.right {
     position: absolute;
     left: auto;
-    right: 1%;
-    width: 47%;
+    right: 2%;
+    width: 44%;
     height: auto;
-    aspect-ratio: 190 / 320;
-    top: 16%;
+    aspect-ratio: 185 / 378;
+    top: 3%;
     z-index: 2;
   }
 
   .phone-device.left .phone-inner {
-    transform: rotate(-4deg);
+    transform: rotate(-5deg);
   }
 
   .phone-device.right .phone-inner {
-    transform: rotate(4deg);
+    transform: rotate(5deg);
   }
 
   .hero-loaded .phone-mockups {
@@ -1537,7 +1545,7 @@
   .hero-section {
     height: auto;
     min-height: 0;
-    padding: 96px 20px 0;
+    padding: 100px 20px 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1549,6 +1557,8 @@
     justify-content: space-between;
     gap: 12px;
     top: 24px;
+    max-width: calc(100% - 32px);
+    width: 100%;
   }
 
   .nav-links {
@@ -1556,12 +1566,13 @@
   }
 
   .logo-full {
-    height: 36px;
+    height: 32px;
   }
 
   .nav-cta {
-    padding: 10px 14px;
+    padding: 8px 14px;
     font-size: 14px;
+    line-height: 20px;
   }
 
   .hero-content {
@@ -1569,25 +1580,36 @@
     z-index: 6;
     transform: none;
     width: 100%;
-    max-width: 480px;
+    max-width: 520px;
     margin: 0 auto;
     align-items: center;
     text-align: center;
+    gap: 20px;
+    top: auto;
+    left: auto;
   }
 
   .hero-content .tag {
     align-self: center;
     max-width: 100%;
+    padding: 6px 12px;
+  }
+
+  .tag-icon {
+    width: 20px;
+    height: 20px;
   }
 
   .tag-text {
     white-space: normal;
+    font-size: 13px;
+    line-height: 18px;
   }
 
   .hero-title {
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -0.5px;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -1px;
     text-align: center;
   }
 
@@ -1595,11 +1617,102 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    max-width: 360px;
   }
 
   .hero-buttons {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+  }
+
+  .google-play-btn {
+    padding: 5px 12px;
+  }
+
+  .google-play-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .google-play-store {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .learn-more-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .phone-mockups {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+    z-index: 5;
+    display: block;
+  }
+
+  .phone-mockups-inner {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    aspect-ratio: 420 / 600;
+    height: auto;
+    display: block;
+  }
+
+  .phone-device.center {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+    width: 58%;
+    height: auto;
+    aspect-ratio: 185 / 378;
+    top: 0;
+    margin: 0;
+    z-index: 3;
+  }
+
+  .phone-device.left {
+    position: absolute;
+    left: 2%;
+    right: auto;
+    width: 48%;
+    height: auto;
+    aspect-ratio: 185 / 378;
+    top: 8%;
+    z-index: 2;
+  }
+
+  .phone-device.right {
+    position: absolute;
+    left: auto;
+    right: 2%;
+    width: 48%;
+    height: auto;
+    aspect-ratio: 185 / 378;
+    top: 5%;
+    z-index: 2;
+  }
+
+  .phone-device.left .phone-inner {
+    transform: rotate(-5deg);
+  }
+
+  .phone-device.right .phone-inner {
+    transform: rotate(5deg);
+  }
+
+  .hero-loaded .phone-mockups {
+    transform: translateY(0);
   }
 
   .features-section {
@@ -1642,47 +1755,216 @@
   }
 
   .hero-video-bg {
-    height: 420px;
+    height: 480px;
   }
 
   .hero-gradient-overlay {
-    height: 420px;
+    height: 480px;
+  }
+
+  .phone-side-left,
+  .phone-side-right,
+  .phone-bottom-fill {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .phone-side-left {
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      #e8f0fe 0%,
+      #f4f8ff 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .phone-side-right {
+    top: 0;
+    right: 0;
+    width: 18%;
+    height: 100%;
+    background: linear-gradient(
+      270deg,
+      #e8f0fe 0%,
+      #f4f8ff 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .phone-bottom-fill {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 35%,
+      #ffffff 100%
+    );
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 84px 16px 0;
+    padding: 88px 16px 0;
+  }
+
+  .nav-bar {
+    top: 20px;
+    max-width: calc(100% - 24px);
   }
 
   .nav-cta {
-    padding: 8px 12px;
+    padding: 7px 12px;
     font-size: 13px;
+    line-height: 18px;
   }
 
   .logo-full {
-    height: 32px;
+    height: 28px;
+  }
+
+  .hero-content {
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .hero-content .tag {
+    padding: 5px 10px;
+  }
+
+  .tag-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tag-text {
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .hero-title {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.5px;
   }
 
   .hero-subtitle {
     font-size: 15px;
     line-height: 22px;
+    max-width: 300px;
   }
 
-  .tag-text {
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .google-play-btn {
+    padding: 4px 10px;
+    gap: 6px;
+  }
+
+  .google-play-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .google-play-label {
+    font-size: 7px;
+    line-height: 9px;
+  }
+
+  .google-play-store {
     font-size: 13px;
+    line-height: 17px;
+  }
+
+  .learn-more-btn {
+    padding: 5px 12px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .phone-mockups {
+    margin-top: 24px;
+  }
+
+  .phone-mockups-inner {
+    max-width: 360px;
+    aspect-ratio: 360 / 540;
+  }
+
+  .phone-device.center {
+    width: 58%;
+    aspect-ratio: 185 / 378;
+    top: 0;
+  }
+
+  .phone-device.left {
+    width: 50%;
+    aspect-ratio: 185 / 378;
+    left: 0;
+    top: 10%;
+  }
+
+  .phone-device.right {
+    width: 50%;
+    aspect-ratio: 185 / 378;
+    right: 0;
+    top: 7%;
+  }
+
+  .phone-device.left .phone-inner {
+    transform: rotate(-5deg);
+  }
+
+  .phone-device.right .phone-inner {
+    transform: rotate(5deg);
+  }
+
+  .phone-side-left {
+    width: 20%;
+    background: linear-gradient(
+      90deg,
+      #e8f0fe 0%,
+      #f4f8ff 35%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .phone-side-right {
+    width: 20%;
+    background: linear-gradient(
+      270deg,
+      #e8f0fe 0%,
+      #f4f8ff 35%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .phone-bottom-fill {
+    height: 60%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 30%,
+      #ffffff 100%
+    );
   }
 
   .hero-video-bg {
-    height: 340px;
+    height: 360px;
   }
 
   .hero-gradient-overlay {
-    height: 340px;
+    height: 360px;
   }
 }

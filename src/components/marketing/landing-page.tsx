@@ -518,6 +518,9 @@ export function LandingPage() {
 
         {/* Phone Mockups */}
         <div className="phone-mockups">
+          <div className="phone-side-left" aria-hidden="true" />
+          <div className="phone-side-right" aria-hidden="true" />
+          <div className="phone-bottom-fill" aria-hidden="true" />
           <div className="phone-mockups-inner">
             <div className="phone-device left">
               <div className="phone-inner">
