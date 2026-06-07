@@ -191,6 +191,10 @@
     transition: none;
   }
 
+  .hero-loaded .hero-content .tag {
+    animation: none;
+  }
+
   .nav-bar {
     opacity: 1;
     transform: translateX(-50%);
@@ -283,15 +287,61 @@
   z-index: 5;
 }
 
+@property --tag-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .tag {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
   padding: 8px;
   background: rgba(255, 255, 255, 0.4);
-  border: 1px solid #60a5fa;
+  border: 1px solid #bfdbfe;
   border-radius: 99px;
+}
+
+/* Gradient light that loops around the tag outline */
+.tag::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--tag-angle),
+    transparent 0deg,
+    transparent 200deg,
+    #93c5fd 270deg,
+    #3b82f6 320deg,
+    #60a5fa 345deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+/* Start the looping light when the owning section becomes active */
+.hero-loaded .hero-content .tag::before,
+.features-section.animate-in .tag::before {
+  opacity: 1;
+  animation: tag-border-loop 3s linear infinite;
+}
+
+@keyframes tag-border-loop {
+  to {
+    --tag-angle: 360deg;
+  }
 }
 
 .tag-icon {
@@ -571,6 +621,10 @@
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .features-section.animate-in .tag::before {
+    animation: none;
   }
 }
 
