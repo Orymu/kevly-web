@@ -3,6 +3,45 @@
 import { useEffect, useRef, useState } from "react";
 import "@/styles/landing-page.css";
 
+/**
+ * Auto-plays a card's hover animation when it scrolls into view, but only on
+ * devices that lack hover (touch/mobile). On hover-capable devices it does
+ * nothing, so the existing mouse-enter/leave behavior is preserved.
+ */
+function useInViewAutoPlay<T extends HTMLElement>(
+  onEnter: () => void,
+  onLeave: () => void
+) {
+  const ref = useRef<T>(null);
+  const enterRef = useRef(onEnter);
+  const leaveRef = useRef(onLeave);
+  enterRef.current = onEnter;
+  leaveRef.current = onLeave;
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof window === "undefined") return;
+
+    // Only auto-play where hover isn't available (touch devices).
+    if (!window.matchMedia("(hover: none)").matches) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) enterRef.current();
+          else leaveRef.current();
+        });
+      },
+      { threshold: 0.55 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
+}
+
 function GooglePlayButton() {
   return (
     <a
@@ -87,8 +126,14 @@ function LiveItemList() {
 
   useEffect(() => () => clearTimers(), []);
 
+  const rootRef = useInViewAutoPlay<HTMLDivElement>(
+    handleMouseEnter,
+    handleMouseLeave
+  );
+
   return (
     <div
+      ref={rootRef}
       className={`live-item-list${zoomed ? " zoomed" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -215,8 +260,14 @@ function LivePaymentCard() {
 
   useEffect(() => () => clearAll(), []);
 
+  const rootRef = useInViewAutoPlay<HTMLDivElement>(
+    handleMouseEnter,
+    handleMouseLeave
+  );
+
   return (
     <div
+      ref={rootRef}
       className={`live-payment-card${zoomed ? " zoomed" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -347,8 +398,14 @@ function LiveSummaryCard() {
   const formatGreen = (n: number) =>
     `+Rp ${Math.round(n).toLocaleString("id-ID")}`;
 
+  const rootRef = useInViewAutoPlay<HTMLDivElement>(
+    handleMouseEnter,
+    handleMouseLeave
+  );
+
   return (
     <div
+      ref={rootRef}
       className={`live-summary-card${zoomed ? " zoomed" : ""}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
