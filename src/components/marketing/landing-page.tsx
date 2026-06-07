@@ -4,9 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import "@/styles/landing-page.css";
 
 /**
- * Auto-plays a card's hover animation when it scrolls into view, but only on
- * devices that lack hover (touch/mobile). On hover-capable devices it does
- * nothing, so the existing mouse-enter/leave behavior is preserved.
+ * Auto-plays a card's animation when it scrolls into view. Works on every
+ * device (the hover handlers stay wired for mouse users on top of this).
  */
 function useInViewAutoPlay<T extends HTMLElement>(
   onEnter: () => void,
@@ -21,18 +20,22 @@ function useInViewAutoPlay<T extends HTMLElement>(
   useEffect(() => {
     const el = ref.current;
     if (!el || typeof window === "undefined") return;
+    if (typeof IntersectionObserver === "undefined") return;
 
-    // Only auto-play where hover isn't available (touch devices).
-    if (!window.matchMedia("(hover: none)").matches) return;
-
+    let inView = false;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) enterRef.current();
-          else leaveRef.current();
+          if (entry.isIntersecting && !inView) {
+            inView = true;
+            enterRef.current();
+          } else if (!entry.isIntersecting && inView) {
+            inView = false;
+            leaveRef.current();
+          }
         });
       },
-      { threshold: 0.55 }
+      { threshold: 0.3, rootMargin: "0px 0px -10% 0px" }
     );
 
     observer.observe(el);
