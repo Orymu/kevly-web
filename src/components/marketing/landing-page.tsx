@@ -45,20 +45,30 @@ function useInViewAutoPlay<T extends HTMLElement>(
   return ref;
 }
 
-function GooglePlayButton() {
+function JoinBetaButton() {
   return (
     <a
-      href="#"
-      className="google-play-btn"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfWY_E02JIqNhXJpXe5YH0fHz7e9_U6EaFpPKPCUiuzH-ZFVw/viewform"
+      className="join-beta-btn"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Get it on Google Play"
     >
-      <img
-        src="/landing/app-store.svg"
-        alt="Get it on Google Play"
-        className="google-play-badge"
-      />
+      <span className="join-beta-label">Join Beta Testing</span>
+      <svg
+        className="join-beta-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          d="M5 12h14M13 6l6 6-6 6"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
     </a>
   );
 }
@@ -535,7 +545,9 @@ export function LandingPage() {
             <a href="#use-cases">Use Cases</a>
           </div>
 
-          <button className="nav-cta">Learn More</button>
+          <a className="nav-cta" href="mailto:hello@kevly.app">
+            Contact Us
+          </a>
         </nav>
 
         {/* Hero Content */}
@@ -561,7 +573,7 @@ export function LandingPage() {
           </p>
 
           <div className="hero-buttons">
-            <GooglePlayButton />
+            <JoinBetaButton />
           </div>
         </div>
 
