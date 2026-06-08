@@ -1769,6 +1769,12 @@
     padding: 16px;
   }
 
+  .live-item-list.zoomed,
+  .live-payment-card.zoomed,
+  .live-summary-card.zoomed {
+    transform: scale(1.02);
+  }
+
   .features-section {
     padding: 48px 20px;
     gap: 48px;
