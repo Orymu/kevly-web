@@ -809,7 +809,7 @@ export function LandingPage() {
           <div className="footer-links">
             <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
-            <a href="#use-cases">Use Cases</a>
+            <a href="mailto:hello@kevly.app">Contact Us</a>
           </div>
         </div>
       </footer>
