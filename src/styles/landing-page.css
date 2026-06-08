@@ -427,8 +427,8 @@
 .join-beta-label {
   font-family: var(--lp-font-sans);
   font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   color: #ffffff;
   white-space: nowrap;
 }
@@ -1718,7 +1718,8 @@
   }
 
   .join-beta-label {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .phone-mockups {
@@ -1961,7 +1962,8 @@
   }
 
   .join-beta-label {
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 18px;
   }
 
   .join-beta-arrow {
