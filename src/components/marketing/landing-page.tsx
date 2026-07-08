@@ -45,30 +45,25 @@ function useInViewAutoPlay<T extends HTMLElement>(
   return ref;
 }
 
-function JoinBetaButton() {
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=app.kevly";
+
+function GooglePlayButton() {
   return (
     <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSfWY_E02JIqNhXJpXe5YH0fHz7e9_U6EaFpPKPCUiuzH-ZFVw/viewform"
-      className="join-beta-btn"
+      href={PLAY_STORE_URL}
+      className="google-play-btn"
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Get it on Google Play"
     >
-      <span className="join-beta-label">Join Beta Testing</span>
-      <svg
-        className="join-beta-arrow"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          d="M5 12h14M13 6l6 6-6 6"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <img
+        src="/landing/app-store.svg"
+        alt=""
+        className="google-play-badge"
+        width={135}
+        height={40}
+      />
     </a>
   );
 }
@@ -573,7 +568,7 @@ export function LandingPage() {
           </p>
 
           <div className="hero-buttons">
-            <JoinBetaButton />
+            <GooglePlayButton />
           </div>
         </div>
 
